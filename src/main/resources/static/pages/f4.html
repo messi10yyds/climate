@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>F4 - Multi-Region Comparison</title>
+
+    <!-- 引入 CSS -->
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/f4.css">
+
+    <!-- ECharts -->
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Back Button -->
+    <div class="back-btn" onclick="window.location.href='/index.html'">← Back</div>
+
+    <h1>F4 - Multi-Region Temperature Comparison</h1>
+
+    <!-- Search Panel -->
+    <div class="card">
+        <div class="input-row">
+            <label>Compare Type:</label>
+            <select id="type">
+                <option value="state">State</option>
+                <option value="county">County</option>
+            </select>
+
+            <label>Year:</label>
+            <input id="year" type="number" placeholder="1954">
+
+            <label>Regions:</label>
+            <input id="regions" class="long" type="text" placeholder="AL, CA, TX 或 Autauga, Baldwin">
+
+            <button onclick="searchCompare()">Search</button>
+        </div>
+    </div>
+
+    <!-- Result Panel -->
+    <div class="card">
+        <h2>Comparison Result</h2>
+
+        <div id="chart"></div>
+
+        <table id="resultTable"></table>
+    </div>
+
+</div>
+
+<!-- 引入 JS -->
+<script src="../js/f4.js"></script>
+
+</body>
+</html>

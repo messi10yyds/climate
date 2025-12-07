@@ -1,0 +1,87 @@
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    margin: 0;
+    padding: 40px 0;
+    background: #eef3f8;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px;
+    font-weight: 600;
+    color: #1f3c88;
+}
+
+/* 卡片通用样式 */
+.card {
+    background: linear-gradient(145deg, #ffffff, #f6f9fc);
+    padding: 25px 30px;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+    border: 1px solid #dbe3ec;
+}
+
+/* Summary 区整体居中 */
+.summary-wrapper {
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Summary 文本 */
+.summary-box h2 {
+    margin-top: 0;
+    font-size: 22px;
+    font-weight: bold;
+    color: #2a4a8a;
+}
+
+.summary-box p,
+.summary-box li {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* 功能按钮区（大卡片） */
+.functions-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* 按钮排列 */
+.functions-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+/* 按钮样式 */
+.func-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 16px 10px;
+    background: white;
+    border-radius: 12px;
+
+    text-decoration: none;
+    color: #1a2e55;
+    font-size: 15px;
+    font-weight: 500;
+
+    border: 1px solid #d9e2ef;
+
+    transition: 0.25s ease;
+}
+
+.func-btn:hover {
+    background: #e2ecff;
+    border-color: #6f9dff;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}

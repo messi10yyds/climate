@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>F6 - Temperature Anomaly Detection</title>
+
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/f6.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+
+    <a href="/index.html" class="back-btn">← Back</a>
+
+    <h1 class="title-center">F6 - Temperature Anomaly Detection</h1>
+
+    <!-- 年份选择器 -->
+    <div class="card select-card">
+        <label class="select-label">Select Year:</label>
+        <select id="yearSelect" class="year-select" onchange="updateByYear()"></select>
+    </div>
+
+    <!-- 异常州图表 -->
+    <div class="card">
+        <h2 class="section-title">State-Level Anomalies</h2>
+        <div id="stateChart"></div>
+        <table id="stateTable"></table>
+    </div>
+
+</div>
+
+<script src="../js/f6.js"></script>
+
+</body>
+</html>

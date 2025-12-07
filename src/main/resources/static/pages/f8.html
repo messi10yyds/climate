@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Temperature Amplitude</title>
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/f8.css">
+</head>
+
+<body>
+
+<!-- Back -->
+<a id="backBtn" href="/index">← Back</a>
+
+<!-- Page Title -->
+<div class="page-title">Temperature Change Amplitude (1895–2019)</div>
+
+<!-- White Card -->
+<div class="content-card">
+
+    <div id="controlBox">
+        <label>State:</label>
+        <select id="stateSelect">
+            <option value="ALL">All States</option>
+        </select>
+
+        <button id="searchBtn">Search</button>
+    </div>
+
+    <table id="resultTable">
+        <thead>
+        <tr>
+            <th data-key="county_name">County</th>
+            <th data-key="state_name">State</th>
+            <th data-key="max_temp">Max Temp</th>
+            <th data-key="max_year">Max Year</th>
+            <th data-key="min_temp">Min Temp</th>
+            <th data-key="min_year">Min Year</th>
+            <th data-key="amplitude">Amplitude</th>
+        </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+</div>
+
+<script src="/js/f8.js"></script>
+</body>
+</html>

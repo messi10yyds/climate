@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>F3 - Historical Temperature Extremes</title>
+    <link rel="stylesheet" href="/css/f3.css">
+</head>
+<body>
+
+<!-- Back 返回首页 -->
+<div class="back-box">
+    <a href="/index.html" class="back-button">← Back</a>
+</div>
+
+<h1 class="title">F3 - Historical Temperature Extremes</h1>
+
+<!-- 查询区域 -->
+<div class="search-box">
+    <div class="field">
+        <label>Region Type:</label>
+        <select id="regionType">
+            <option value="national">National</option>
+            <option value="state">State</option>
+            <option value="county">County</option>
+        </select>
+    </div>
+
+    <div class="field">
+        <label>Region Name:</label>
+        <input id="regionName" type="text" placeholder="e.g., USA / Georgia / Autauga">
+    </div>
+
+    <button id="searchBtn" class="btn-primary">Search</button>
+</div>
+
+<!-- 结果卡片 -->
+<div id="resultCard" class="result-card" style="display:none;">
+    <h2 id="resultTitle"></h2>
+
+    <div class="extreme-box">
+        <p><strong>Highest Temp:</strong> <span id="maxTemp"></span></p>
+        <p><strong>Lowest Temp:</strong> <span id="minTemp"></span></p>
+    </div>
+</div>
+
+<!-- 表格卡片 -->
+<div id="tableCard" class="result-card" style="display:none;">
+    <h2 id="tableTitle"></h2>
+    <table id="extremeTable">
+        <thead></thead>
+        <tbody></tbody>
+    </table>
+</div>
+
+<script src="/js/f3.js"></script>
+
+</body>
+</html>

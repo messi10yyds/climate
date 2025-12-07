@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>F1 - Historical Temperature Trend</title>
+
+<!--    <link rel="stylesheet" href="../css/common.css">-->
+    <link rel="stylesheet" href="../css/f1.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+</head>
+<body>
+
+<h1>F1 - Historical Temperature Trend</h1>
+
+<div class="f1-container">
+
+    <!-- 查询卡片 -->
+    <div class="card query-card">
+
+        <div class="form-row">
+            <label>Region Type:</label>
+            <select id="typeSelect">
+                <option value="national">National</option>
+                <option value="state">State</option>
+                <option value="county">County</option>
+            </select>
+
+            <label>Region Name:</label>
+            <input id="regionInput" placeholder="e.g., Alabama / Autauga">
+
+            <button id="queryBtn">Query</button>
+        </div>
+
+        <p id="errorMsg" class="error"></p>
+    </div>
+
+    <!-- 图表卡片 -->
+    <div class="card chart-card">
+
+        <div id="chart"></div>
+
+        <div class="unit-box">
+            <button id="btnF" class="unit active">°F</button>
+            <button id="btnC" class="unit">°C</button>
+        </div>
+        <!-- 右下角小控件 -->
+        <div class="interval-box">
+            <label>X-Axis Interval:</label>
+            <select id="intervalSelect">
+                <option value="5">5 years</option>
+                <option value="10">10 years</option>
+                <option value="20">20 years</option>
+                <option value="30">30 years</option>
+                <option value="50">50 years</option>
+                <option value="1">1 year</option>
+            </select>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="../js/f1.js"></script>
+
+</body>
+</html>

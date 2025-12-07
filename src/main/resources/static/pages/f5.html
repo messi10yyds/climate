@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>F5 - Temperature Ranking</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/f5.css">
+
+    <!-- ECharts -->
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Back -->
+    <div class="back-btn" onclick="window.location.href='/index.html'">← Back</div>
+
+    <h1>F5 - Top 10 Temperature Ranking</h1>
+
+    <!-- Search Inputs -->
+    <div class="card">
+        <div class="input-row">
+            <label>Type:</label>
+            <select id="type">
+                <option value="state">State</option>
+                <option value="county">County</option>
+            </select>
+
+            <label>Year:</label>
+            <input id="year" type="number" placeholder="1954">
+
+            <label>Order:</label>
+            <select id="order">
+                <option value="desc">Highest (desc)</option>
+                <option value="asc">Lowest (asc)</option>
+            </select>
+
+            <button onclick="searchRank()">Search</button>
+        </div>
+    </div>
+
+    <!-- Result -->
+    <div class="card">
+        <h2>Ranking Result</h2>
+
+        <div id="chart"></div>
+
+        <table id="rankTable"></table>
+    </div>
+
+</div>
+
+<!-- JS -->
+<script src="../js/f5.js"></script>
+
+</body>
+</html>

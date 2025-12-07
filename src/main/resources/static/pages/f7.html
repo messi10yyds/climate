@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Top / Bottom 5 Counties</title>
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/f7.css">
+</head>
+
+<body>
+
+<!-- Back Button -->
+<a id="backBtn" href="/index">← Back</a>
+
+<!-- Page Title -->
+<div class="page-title">Top / Bottom 5 Counties within a State</div>
+
+<!-- White Content Card -->
+<div class="content-card">
+
+    <!-- Query Controls -->
+    <div id="queryBox">
+        <label>State:</label>
+        <input type="text" id="stateInput" placeholder="Alabama / AL">
+
+        <label>Year:</label>
+        <select id="yearSelect"></select>
+
+        <label>Order:</label>
+        <select id="orderSelect">
+            <option value="top">Top 5</option>
+            <option value="bottom">Bottom 5</option>
+        </select>
+
+        <button id="searchBtn">Search</button>
+    </div>
+
+    <!-- Chart (optional) -->
+    <div id="chart"></div>
+
+    <!-- Table -->
+    <table id="resultTable">
+        <thead>
+        <tr>
+            <th>County</th>
+            <th>State</th>
+            <th>Temperature</th>
+        </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+<script src="/js/f7.js"></script>
+
+</body>
+</html>

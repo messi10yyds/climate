@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Temperature Analysis System</title>
+
+    <!-- 全局与首页样式 -->
+<!--    <link rel="stylesheet" href="css/common.css">-->
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+<h1>Temperature Analysis System</h1>
+
+<!-- Summary 全部居中展示 -->
+<div class="summary-wrapper">
+
+    <div id="summary" class="summary-box card">
+        <h2>System Summary</h2>
+        <p id="yearRange"></p>
+        <p id="stateCount"></p>
+        <p id="countyCount"></p>
+    </div>
+
+    <div id="tableInfo" class="summary-box card">
+        <h2>Database Tables</h2>
+        <ul id="tableList"></ul>
+    </div>
+</div>
+
+<!-- 功能按钮区 -->
+<div class="functions-wrapper card">
+    <div class="functions-grid">
+
+        <a class="func-btn" href="trend">F1 - Historical Temperature Trend</a>
+        <a class="func-btn" href="distribution">F2 - State Annual Temperature Distribution</a>
+        <a class="func-btn" href="extreme">F3 - Historical Extremes</a>
+        <a class="func-btn" href="pages/f4.html">F4 - Multi-Region Comparison</a>
+
+        <a class="func-btn" href="pages/f5.html">F5 - Annual Ranking (Top 10)</a>
+        <a class="func-btn" href="pages/f6.html">F6 - Temperature Anomaly Detection</a>
+        <a class="func-btn" href="pages/f7.html">F7 - Top/Bottom Five Counties</a>
+        <a class="func-btn" href="pages/f8.html">F8 - Temperature Change Amplitude</a>
+
+    </div>
+</div>
+
+<!-- 前端逻辑 -->
+<script src="js/index.js"></script>
+
+</body>
+</html>
