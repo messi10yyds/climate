@@ -9,9 +9,7 @@ import java.util.Map;
 @Mapper
 public interface AmplitudeMapper {
 
-    /**
-     * 查询每个县 1895–2019 的温度振幅，并返回最高/最低温度与对应年份
-     */
+
     @Select("""
         SELECT
             ci.county_name,
@@ -30,7 +28,6 @@ public interface AmplitudeMapper {
         JOIN state_info si 
             ON ci.state_fips = si.state_fips
 
-        -- 获取每个县的最高温度与对应年份
         JOIN (
             SELECT 
                 fips,
@@ -42,7 +39,6 @@ public interface AmplitudeMapper {
             GROUP BY fips
         ) t1 ON t1.fips = ci.fips
 
-        -- 获取每个县的最低温度与对应年份
         JOIN (
             SELECT 
                 fips,

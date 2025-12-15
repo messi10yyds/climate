@@ -23,7 +23,6 @@ public class CompareController {
             @RequestParam Integer year,
             @RequestParam String regions
     ) {
-        // 将 "AL,CA,TX" / "Autauga,Baldwin" 解析为 List
         List<String> list = Arrays.stream(regions.split(","))
                 .map(String::trim)
                 .filter(s -> !s.isEmpty())
@@ -33,12 +32,10 @@ public class CompareController {
             return Result.fail("regions cannot be empty");
         }
 
-        // 对 state 进行多州比较
         if (type.equalsIgnoreCase("state")) {
             return Result.ok(compareService.compareStates(list, year));
         }
 
-        // 对 county 进行多个县比较
         if (type.equalsIgnoreCase("county")) {
             return Result.ok(compareService.compareCounties(list, year));
         }

@@ -10,9 +10,7 @@ import java.util.Map;
 @Mapper
 public interface ExtremeMapper {
 
-    // ======================
-    //   全国 (national)
-    // ======================
+
 
     @Select("""
             SELECT year, temp
@@ -31,9 +29,7 @@ public interface ExtremeMapper {
     Map<String, Object> getNationalMin();
 
 
-    // ======================
-    //   州 (state) — 忽略大小写
-    // ======================
+
 
     @Select("""
         SELECT st.year, st.temp
@@ -62,9 +58,7 @@ public interface ExtremeMapper {
     Map<String, Object> getStateMin(@Param("state") String stateName);
 
 
-    // ======================
-    //   县 (county) — 忽略大小写 + 支持输入“Autauga”匹配“Autauga County”
-    // ======================
+
 
     @Select("""
             SELECT year, temp

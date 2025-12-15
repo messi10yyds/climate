@@ -23,12 +23,10 @@ public class RankingController {
             return Result.fail("order must be asc or desc");
         }
 
-        // Top 10 州
         if (type.equalsIgnoreCase("state")) {
             return Result.ok(rankingService.topStates(year, order));
         }
 
-        // Top 10 县
         if (type.equalsIgnoreCase("county")) {
             return Result.ok(rankingService.topCounties(year, order));
         }

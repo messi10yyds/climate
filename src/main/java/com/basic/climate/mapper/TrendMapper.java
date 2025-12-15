@@ -10,11 +10,9 @@ import java.util.Map;
 @Mapper
 public interface TrendMapper {
 
-    // 1. 全国趋势
     @Select("SELECT year, temp, tempc FROM national_temperature ORDER BY year ASC")
     List<Map<String, Object>> getNationalTrend();
 
-    // 2. 州趋势（按州名）
     @Select("""
         SELECT st.year, st.temp, st.tempc
         FROM state_temperature st
@@ -28,7 +26,6 @@ public interface TrendMapper {
     List<Map<String, Object>> getStateTrend(@Param("state") String state);
 
 
-    // 3. 县趋势（按县名）
     @Select("""
             SELECT year, temp, tempc
             FROM county_temperature 

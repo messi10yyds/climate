@@ -10,7 +10,6 @@ import java.util.Map;
 @Mapper
 public interface AnomalyMapper {
 
-    // 1) 所有州的所有年份数据
     @Select("""
         SELECT 
             st.year,
@@ -24,7 +23,6 @@ public interface AnomalyMapper {
         """)
     List<Map<String, Object>> getAllStateSeries();
 
-    // 2) 所有县的所有年份数据（带州信息）
     @Select("""
         SELECT
             ct.year,
@@ -41,7 +39,6 @@ public interface AnomalyMapper {
         """)
     List<Map<String, Object>> getAllCountySeries();
 
-    // 3) 某个州下所有县的所有年份数据（用于点击州+年份 → 查异常县）
     @Select("""
         SELECT
             ct.year,

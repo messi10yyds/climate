@@ -10,9 +10,7 @@ import java.util.Map;
 @Mapper
 public interface StateCountyRankMapper {
 
-    /**
-     * 查询某州某年的最高温 Top5 县
-     */
+
     @Select("""
         SELECT 
             ci.county_name,
@@ -34,9 +32,7 @@ public interface StateCountyRankMapper {
             @Param("year") Integer year
     );
 
-    /**
-     * 查询某州某年的最低温 Bottom5 县
-     */
+
     @Select("""
         SELECT 
             ci.county_name,
