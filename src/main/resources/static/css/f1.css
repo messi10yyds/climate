@@ -100,13 +100,47 @@ button:hover {
 }
 
 .unit.active {
-    background: #3d6dcc;  /* 激活蓝底 */
-    color: white;          /* 激活白字 */
-    border-color: #3d6dcc; /* 边框一致 */
+    background: #3d6dcc;
+    color: white;
+    border-color: #3d6dcc;
 }
 
 h1 {
     text-align: center;
     margin-bottom: 25px;
-    color: #1f3a72; /* 可选：加一点深蓝色，更统一 */
+    color: #1f3a72;
 }
+
+.back-btn {
+    all: unset;                 /* 🔥 关键：彻底清除 a 的默认样式 */
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    z-index: 9999;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: inherit;
+
+    color: #2c3e50;
+    background: #ffffff;
+
+    border: 1px solid rgba(0,0,0,0.08);
+    border-radius: 10px;
+    cursor: pointer;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.10);
+    transition: all 0.15s ease;
+}
+
+.back-btn:hover {
+    background: #f5f7fa;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.14);
+}
+
